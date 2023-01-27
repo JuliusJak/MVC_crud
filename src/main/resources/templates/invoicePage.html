@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is your invoice page</h1>
+
+    <button onclick="window.location.href='http://localhost:8080/PaymentPage';">Payment Page</button>
+    <button onclick="window.location.href='http://localhost:8080/deletePage';">Delete Page</button>
+    <button onclick="window.location.href='http://localhost:8080/editPage';">Edit Page</button>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>titel</th>
+            <th>beskrivning</th>
+            <th>kategori</th>
+            <th>pris</th>
+            <th>date</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="item: ${items}">
+            <td th:text="${item.id}" />
+            <td th:text="${item.name}" />
+            <td th:text="${item.titel}" />
+            <td th:text="${item.beskrivning}" />
+            <td th:text="${item.kategori}" />
+            <td th:text="${item.pris}" />
+            <td th:text="${item.date}" />
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
